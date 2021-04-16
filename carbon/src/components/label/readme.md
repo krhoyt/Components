@@ -17,6 +17,13 @@
 | `truncate`  | `truncate`  |             | `boolean` | `false`     |
 
 
+## Shadow Parts
+
+| Part      | Description |
+| --------- | ----------- |
+| `"label"` |             |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

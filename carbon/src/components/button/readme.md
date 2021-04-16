@@ -17,6 +17,13 @@
 | `size`      | `size`      |             | `string`  | `'default'` |
 
 
+## Shadow Parts
+
+| Part       | Description |
+| ---------- | ----------- |
+| `"button"` |             |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

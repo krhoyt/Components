@@ -8,7 +8,7 @@ import { Component, h, Prop } from '@stencil/core';
 export class Label {
   render() {
     return (
-      <p>
+      <p part="label">
         <slot></slot>
       </p>
     );

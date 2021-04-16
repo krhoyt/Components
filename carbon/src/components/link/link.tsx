@@ -11,6 +11,7 @@ export class Link {
       <button 
         disabled={this.disabled}
         onClick={() => this.doClick()}
+        part="link"
         type="button">
         <slot></slot>
       </button>

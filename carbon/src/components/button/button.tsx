@@ -11,6 +11,7 @@ export class Button {
     return (
       <button 
         disabled={this.disabled}
+        part="button"
         style={{backgroundImage: this.icon === undefined ? '' : `url( build/assets/${this.icon}.svg )`}}
         type="button">
         <slot></slot>

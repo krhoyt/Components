@@ -17,6 +17,13 @@
 | `inline`    | `inline`    |             | `boolean` | `false`     |
 
 
+## Shadow Parts
+
+| Part     | Description |
+| -------- | ----------- |
+| `"link"` |             |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
