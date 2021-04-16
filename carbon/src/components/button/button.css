@@ -1,0 +1,169 @@
+:host {
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+}
+
+:host( [concealed] ) {
+  visibility: hidden;
+}
+
+:host( [hidden] ) {
+  display: none;
+}
+
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  background-color: #0f62fe;          
+  background-position: right 16px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  border: none;
+  border: solid 1px transparent;
+  box-sizing: border-box;          
+  color: #ffffff;          
+  cursor: pointer;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  height: 48px;
+  margin: 0;
+  outline: solid 1px transparent;
+  outline-offset: -3px;
+  padding: 0 60px 0 12px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+button:focus {
+  border-color: #0f62fe;
+  box-shadow: 
+    inset 0 0 0 1px #0f62fe,
+    inset 0 0 0 2px #ffffff;          
+}      
+
+button:hover {
+  background-color: #0353e9;
+}              
+
+:host( [disabled] ) button {
+  background-color: #c6c6c6;
+  color: #8d8d8d;
+  cursor: not-allowed;
+}
+
+:host( [size="field"] ) button {
+  height: 40px;
+}
+
+:host( [size="sm"] ) button {
+  height: 32px;
+}        
+
+:host( [size="lg"] ) button {
+  height: 64px;
+}              
+
+:host( [size="xl"] ) button {
+  height: 80px;
+}
+
+:host( [kind="secondary"] ) button {
+  background-color: #393939;
+  color: #ffffff;
+  padding: 0 60px 0 12px;
+}
+
+:host( [kind="secondary"] ) button:focus {
+  border-color: #0f62fe;
+  box-shadow: 
+    inset 0 0 0 1px #0f62fe,
+    inset 0 0 0 2px #ffffff;          
+}
+
+:host( [kind="secondary"] ) button:hover {
+  background-color: #4a4a4a;          
+}
+
+:host( [kind="secondary"] ) button[disabled] {
+  background-color: #c6c6c6;
+  color: #8d8d8d;
+  cursor: not-allowed;
+}        
+
+:host( [kind="tertiary"] ) button {
+  background: none;
+  border: solid 1px #0f62fe;
+  color: #0f62fe;
+  padding: 0 60px 0 12px;
+}        
+
+:host( [kind="tertiary"] ) button:focus {
+  background-color: #0f62fe;
+  border-color: #0f62fe;
+  box-shadow: 
+    inset 0 0 0 1px #0f62fe,
+    inset 0 0 0 2px #ffffff;
+  color: #ffffff;          
+}
+
+:host( [kind="tertiary"] ) button:hover {
+  background-color: #0353e9;
+  border: solid 1px #0353e9;          
+  color: #ffffff;
+}        
+
+:host( [kind="tertiary"] ) button[disabled] {
+  background: none;
+  border: solid 1px #c6c6c6;
+  color: #c6c6c6;
+  cursor: not-allowed
+}
+
+:host( [kind="danger"] ) button {
+  background-color: #da1e28;
+  color: #ffffff;
+  padding: 0 60px 0 12px;
+}
+
+:host( [kind="danger"] ) button:focus {
+  border-color: #0f62fe;
+  box-shadow: 
+    inset 0 0 0 1px #0f62fe,
+    inset 0 0 0 2px #ffffff;
+}
+
+:host( [kind="danger"] ) button:hover {
+  background-color: #bc1a22;
+}
+
+:host( [kind="danger"] ) button[disabled] {
+  background-color: #c6c6c6;
+  color: #8d8d8d;
+  cursor: not-allowed;
+}
+
+:host( [kind="ghost"] ) button {
+  background: none;
+  color: #0f62fe;
+  padding: 0 12px 0 12px;
+}
+
+:host( [kind="ghost"] ) button:focus {
+  border-color: #0f62fe;
+  box-shadow: 
+    inset 0 0 0 1px #0f62fe,
+    inset 0 0 0 2px #ffffff;
+}
+
+:host( [kind="ghost"] ) button:hover {
+  background-color: #e5e5e5e4;
+}
+
+:host( [kind="ghost"] ) button[disabled] {
+  background: none;
+  color: #c6c6c6;
+  cursor: not-allowed;
+}        

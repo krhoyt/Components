@@ -1,0 +1,43 @@
+:host {
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+}
+
+:host( [concealed] ) {
+  visibility: hidden;
+}
+
+:host( [hidden] ) {
+  display: none;
+}
+
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  box-sizing: border-box;
+  color: var( --link-color, #0f62fe );
+  cursor: pointer;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: var( --link-font-size, 14px );
+  font-weight: 400;
+  margin: 0;
+  outline: none;
+  padding: 0;
+}
+
+button:hover {
+  text-decoration: underline;
+}
+
+:host( [disabled] ) button {
+  color: var( --link-disabled-color, #c6c6c6 );
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+:host( [inline] ) button {
+  text-decoration: underline;
+}
