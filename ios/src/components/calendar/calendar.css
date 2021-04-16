@@ -1,0 +1,83 @@
+:host {
+  background-color: var( --calendar-background-color, #ffffff );
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: height 0.30s;
+}
+
+:host( [hidden] ) {
+  display: none;
+}
+
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: -apple-system, sans-serif;    
+  font-size: 20px;  
+  margin: 0;
+  outline: none;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba( 0, 0, 0, 0 );                      
+}
+
+button[disabled] {
+  cursor: default;
+}
+
+div.days,
+div.header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+div.days {
+  padding: 6px 4px 0 4px;
+}
+
+div.days p {
+  color: #c4c4c5;
+  cursor: default;
+  flex-basis: 0;
+  flex-grow: 1;
+  font-family: -apple-system, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+div.header {
+  padding: 4px 4px 0 16px;
+}
+
+div.header button:nth-of-type( 1 ) {
+  flex-basis: 0;
+  flex-grow: 1;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: left;
+}
+
+div.header button:nth-of-type( 2 ) {
+  background-image: url( build/assets/back.svg );
+  height: 36px;  
+  margin: 0 8px 0 0;
+  width: 36px;
+}
+
+div.header button:nth-of-type( 3 ) {
+  background-image: url( build/assets/next.svg );
+  height: 36px;  
+  width: 36px;
+}
