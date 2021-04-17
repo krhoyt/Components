@@ -1,0 +1,63 @@
+:host {
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+}
+
+:host( [concealed] ) {
+  visibility: hidden !important;
+}
+
+:host( [hidden] ) {
+  display: none;
+}
+
+button {
+  background: none;
+  background-image: url( build/assets/checkbox.svg );
+  background-position: left center;
+  background-repeat: no-repeat;  
+  background-size: 20px;
+  border: none;
+  box-sizing: border-box;         
+  color: #161616;
+  cursor: pointer;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  outline: none;
+  padding: 3px 0 3px 26px;
+}
+
+button[disabled] {
+  background-image: url( build/assets/checkbox-disabled.svg );
+  color: #c6c6c6;
+  cursor: not-allowed;
+}
+
+:host( [checked] ) button {
+  background-image: url( build/assets/checkbox-checked.svg );
+}
+
+:host( [checked] ) button[disabled] {
+  background-image: url( build/assets/checkbox-checked-disabled.svg );          
+}
+
+button::before {
+  border: solid 1px transparent;
+  border-radius: 1px;
+  content: '';  
+  height: 14px;
+  left: 0;
+  margin: 2px;
+  position: absolute;
+  top: 2px;
+  width: 14px;
+}
+
+button:focus::before {
+  box-shadow: 
+    0 0 0 2px #ffffff,
+    0 0 0 4px #0f62fe;  
+}

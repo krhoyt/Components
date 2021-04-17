@@ -5,7 +5,7 @@
 }
 
 :host( [concealed] ) {
-  visibility: hidden;
+  visibility: hidden !important;
 }
 
 :host( [hidden] ) {

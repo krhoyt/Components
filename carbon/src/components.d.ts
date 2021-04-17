@@ -14,6 +14,12 @@ export namespace Components {
         "kind": string;
         "size": string;
     }
+    interface IbmCheckbox {
+        "checked": boolean;
+        "concealed": boolean;
+        "disabled": boolean;
+        "hidden": boolean;
+    }
     interface IbmLabel {
         "concealed": boolean;
         "data": any;
@@ -38,6 +44,12 @@ declare global {
         prototype: HTMLIbmButtonElement;
         new (): HTMLIbmButtonElement;
     };
+    interface HTMLIbmCheckboxElement extends Components.IbmCheckbox, HTMLStencilElement {
+    }
+    var HTMLIbmCheckboxElement: {
+        prototype: HTMLIbmCheckboxElement;
+        new (): HTMLIbmCheckboxElement;
+    };
     interface HTMLIbmLabelElement extends Components.IbmLabel, HTMLStencilElement {
     }
     var HTMLIbmLabelElement: {
@@ -52,6 +64,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "ibm-button": HTMLIbmButtonElement;
+        "ibm-checkbox": HTMLIbmCheckboxElement;
         "ibm-label": HTMLIbmLabelElement;
         "ibm-link": HTMLIbmLinkElement;
     }
@@ -64,6 +77,13 @@ declare namespace LocalJSX {
         "icon"?: string;
         "kind"?: string;
         "size"?: string;
+    }
+    interface IbmCheckbox {
+        "checked"?: boolean;
+        "concealed"?: boolean;
+        "disabled"?: boolean;
+        "hidden"?: boolean;
+        "onCheckboxChanged"?: (event: CustomEvent<any>) => void;
     }
     interface IbmLabel {
         "concealed"?: boolean;
@@ -83,6 +103,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "ibm-button": IbmButton;
+        "ibm-checkbox": IbmCheckbox;
         "ibm-label": IbmLabel;
         "ibm-link": IbmLink;
     }
@@ -92,6 +113,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "ibm-button": LocalJSX.IbmButton & JSXBase.HTMLAttributes<HTMLIbmButtonElement>;
+            "ibm-checkbox": LocalJSX.IbmCheckbox & JSXBase.HTMLAttributes<HTMLIbmCheckboxElement>;
             "ibm-label": LocalJSX.IbmLabel & JSXBase.HTMLAttributes<HTMLIbmLabelElement>;
             "ibm-link": LocalJSX.IbmLink & JSXBase.HTMLAttributes<HTMLIbmLinkElement>;
         }
