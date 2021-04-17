@@ -1,0 +1,31 @@
+:host {
+  box-sizing: border-box;
+  display: block;
+  min-width: 0;
+  position: relative;
+}
+
+:host( [concealed] ) {
+  visibility: hidden !important;
+}
+
+:host( [hidden] ) {
+  display: none;
+}
+
+p {
+  box-sizing:  border-box;
+  color: var( --label-color, #333333 );
+  cursor: var( --label-cursor, default );
+  font-family: var( --label-font-family, 'Roboto', sans-serif );
+  font-size: var( --label-font-size, 14px );
+  margin: 0;
+  padding: 0;
+  text-align: var( --label-text-align, left );
+}
+
+:host( [truncate] ) p {
+  overflow: hidden;             
+  text-overflow: ellipsis;                           
+  white-space: nowrap;          
+}
