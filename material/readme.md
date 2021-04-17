@@ -6,6 +6,7 @@ Various [Material Design](http://material.io) themed components.
 - [Column](#column)
 - [Label](#label)
 - [Row](#row)
+- [Search](#search)
 - [Spacer](#spacer)
 - [Toolbar](#toolbar)
 
@@ -63,6 +64,34 @@ Container. Shorthand for flex box row.
 
 - concealed (boolean): Visibility hidden
 - hidden (boolean): Display none
+
+## Search
+
+Search field for use in [App Bar](#app-bar).
+
+### Attributes
+
+- concealed (boolean): Visibility hidden
+- hidden (boolean): Display none
+- placeholder (string): Placeholder text
+
+### Events
+
+- searchCancel: Search operation cancelled
+- searchChange: Contents of input have changed
+
+### Styles
+
+- --search-font-family ('Roboto', sans-serif)
+- --search-font-size (16px)
+- --search-input-color (#333333)
+- --search-placeholder-color (#757575)
+
+### Parts
+
+- arrow: Arrow/cancel button
+- input: Underlying input element
+- microphone: Microphone button
 
 ## Spacer
 

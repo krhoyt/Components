@@ -23,6 +23,10 @@
       --bar-background-color: red;
     }
 
+    md-search {
+      --search-font-size: 20px;
+    }
+
     md-toolbar md-label {
       --label-color: white;
     }
@@ -35,13 +39,15 @@
     <md-toolbar>
       <md-label>App Bar</md-label>
     </md-toolbar>
+    <md-search value="This is a test"></md-search>
   </md-app-bar>
   <md-column>
     <md-row>
       <md-label>Kevin</md-label>      
-      <md-spacer></md-spacer>
+      <md-spacer width="4"></md-spacer>
       <md-label>Hoyt</md-label>
     </md-row>
+    <md-button>Cancel</md-button>
   </md-column>
 
 </body>

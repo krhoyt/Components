@@ -10,6 +10,11 @@ export namespace Components {
         "concealed": boolean;
         "hidden": boolean;
     }
+    interface MdButton {
+        "concealed": boolean;
+        "hidden": boolean;
+        "icon": string;
+    }
     interface MdColumn {
         "concealed": boolean;
         "hidden": boolean;
@@ -22,6 +27,11 @@ export namespace Components {
     interface MdRow {
         "concealed": boolean;
         "hidden": boolean;
+    }
+    interface MdSearch {
+        "concealed": boolean;
+        "hidden": boolean;
+        "placeholder": string;
     }
     interface MdSpacer {
         "concealed": boolean;
@@ -39,6 +49,12 @@ declare global {
     var HTMLMdAppBarElement: {
         prototype: HTMLMdAppBarElement;
         new (): HTMLMdAppBarElement;
+    };
+    interface HTMLMdButtonElement extends Components.MdButton, HTMLStencilElement {
+    }
+    var HTMLMdButtonElement: {
+        prototype: HTMLMdButtonElement;
+        new (): HTMLMdButtonElement;
     };
     interface HTMLMdColumnElement extends Components.MdColumn, HTMLStencilElement {
     }
@@ -58,6 +74,12 @@ declare global {
         prototype: HTMLMdRowElement;
         new (): HTMLMdRowElement;
     };
+    interface HTMLMdSearchElement extends Components.MdSearch, HTMLStencilElement {
+    }
+    var HTMLMdSearchElement: {
+        prototype: HTMLMdSearchElement;
+        new (): HTMLMdSearchElement;
+    };
     interface HTMLMdSpacerElement extends Components.MdSpacer, HTMLStencilElement {
     }
     var HTMLMdSpacerElement: {
@@ -72,9 +94,11 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "md-app-bar": HTMLMdAppBarElement;
+        "md-button": HTMLMdButtonElement;
         "md-column": HTMLMdColumnElement;
         "md-label": HTMLMdLabelElement;
         "md-row": HTMLMdRowElement;
+        "md-search": HTMLMdSearchElement;
         "md-spacer": HTMLMdSpacerElement;
         "md-toolbar": HTMLMdToolbarElement;
     }
@@ -83,6 +107,11 @@ declare namespace LocalJSX {
     interface MdAppBar {
         "concealed"?: boolean;
         "hidden"?: boolean;
+    }
+    interface MdButton {
+        "concealed"?: boolean;
+        "hidden"?: boolean;
+        "icon"?: string;
     }
     interface MdColumn {
         "concealed"?: boolean;
@@ -97,6 +126,13 @@ declare namespace LocalJSX {
         "concealed"?: boolean;
         "hidden"?: boolean;
     }
+    interface MdSearch {
+        "concealed"?: boolean;
+        "hidden"?: boolean;
+        "onSearchCancel"?: (event: CustomEvent<any>) => void;
+        "onSearchChange"?: (event: CustomEvent<any>) => void;
+        "placeholder"?: string;
+    }
     interface MdSpacer {
         "concealed"?: boolean;
         "hidden"?: boolean;
@@ -108,9 +144,11 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "md-app-bar": MdAppBar;
+        "md-button": MdButton;
         "md-column": MdColumn;
         "md-label": MdLabel;
         "md-row": MdRow;
+        "md-search": MdSearch;
         "md-spacer": MdSpacer;
         "md-toolbar": MdToolbar;
     }
@@ -120,9 +158,11 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "md-app-bar": LocalJSX.MdAppBar & JSXBase.HTMLAttributes<HTMLMdAppBarElement>;
+            "md-button": LocalJSX.MdButton & JSXBase.HTMLAttributes<HTMLMdButtonElement>;
             "md-column": LocalJSX.MdColumn & JSXBase.HTMLAttributes<HTMLMdColumnElement>;
             "md-label": LocalJSX.MdLabel & JSXBase.HTMLAttributes<HTMLMdLabelElement>;
             "md-row": LocalJSX.MdRow & JSXBase.HTMLAttributes<HTMLMdRowElement>;
+            "md-search": LocalJSX.MdSearch & JSXBase.HTMLAttributes<HTMLMdSearchElement>;
             "md-spacer": LocalJSX.MdSpacer & JSXBase.HTMLAttributes<HTMLMdSpacerElement>;
             "md-toolbar": LocalJSX.MdToolbar & JSXBase.HTMLAttributes<HTMLMdToolbarElement>;
         }

@@ -1,0 +1,41 @@
+:host {
+  box-sizing: border-box;
+  display: block;
+  height: var( --button-height, 36px );
+  position: relative;
+}
+
+:host( [concealed] ) {
+  visibility: hidden;
+}
+
+:host( [hidden] ) {
+  display: none;
+}
+
+button {
+  background: none;
+  background-image: var( --button-background-image );
+  background-position: var( --button-background-position, center );
+  background-repeat: no-repeat;
+  background-size: var( --button-background-size, 24px );
+  border: none;
+  border-radius: 4px;
+  box-sizing:  border-box;
+  color: var( --button-color, red );
+  cursor: var( --button-cursor, pointer );
+  font-family: var( --button-font-family, 'Roboto', sans-serif );
+  font-size: var( --button-font-size, 14px );
+  font-weight: var( --button-font-weight, 600 );
+  height: var( --button-height, 36px );
+  margin: 0;
+  min-width: var( --button-width, 36px );
+  outline: none;
+  overflow: hidden;             
+  padding: 0 16px 0 16px;
+  -webkit-tap-highlight-color: rgba( 0, 0, 0, 0 );                    
+  text-align: var( --label-text-align, left );
+  text-overflow: ellipsis;              
+  text-transform: var( --button-text-transform, uppercase );             
+  white-space: nowrap;                              
+}
