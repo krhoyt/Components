@@ -15,7 +15,7 @@
 
 button {
   background: none;
-  background-image: var( --button-background-image );
+  background-image: var( --button-background-image, none );
   background-position: var( --button-background-position, center );
   background-repeat: no-repeat;
   background-size: var( --button-background-size, 24px );

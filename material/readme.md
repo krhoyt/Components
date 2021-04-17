@@ -3,6 +3,7 @@
 Various [Material Design](http://material.io) themed components.
 
 - [App Bar](#app-bar)
+- [Button](#button)
 - [Column](#column)
 - [Label](#label)
 - [Row](#row)
@@ -23,6 +24,33 @@ Information about current screen.
 
 - --bar-background-color (transparent)
 - --bar-background-image (none)
+
+## Button
+
+Can be used for text labels or icons.
+
+### Attributes
+
+- concealed (boolean): Visibility hidden
+- hidden (boolean): Display none
+- icon (string): Predefined SVG file name
+
+### Styles
+
+- --button-background-image (none)
+- --button-background-position (center)
+- --button-background-size (24px)
+- --button-color (red)
+- --button-cursor (pointer)
+- --button-font-family ('Roboto', sans-serif)
+- --button-font-size (14px)
+- --button-height (36px)
+- --button-text-transform (uppercase)
+- --button-width (36px)
+
+### Parts
+
+- button: Underlying paragraph button element
 
 ## Column
 
