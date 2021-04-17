@@ -1,20 +1,19 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component( {
-  tag: 'md-label',
-  styleUrl: 'label.css',
+  tag: 'md-toolbar',
+  styleUrl: 'toolbar.css',
   shadow: true
 } )
-export class Label {
+export class Toolbar {
   render() {
     return (
-      <p part="label">
+      <Host>
         <slot></slot>
-      </p>
+      </Host>
     );
   }
 
   @Prop( { reflect: true } ) concealed: boolean = false;
   @Prop( { reflect: true } ) hidden: boolean = false;
-  @Prop( { reflect: true } ) truncate: boolean = false;
 }

@@ -1,0 +1,13 @@
+:host {
+  box-sizing: border-box;
+  display: block;
+  flex-basis: 0;
+}
+
+:host( [concealed] ) {
+  visibility: hidden !important;
+}
+
+:host( [hidden] ) {
+  display: none;
+}        
