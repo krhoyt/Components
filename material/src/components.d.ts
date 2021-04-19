@@ -14,10 +14,16 @@ export namespace Components {
         "concealed": boolean;
         "hidden": boolean;
         "icon": string;
+        "kind": string;
     }
     interface MdColumn {
         "concealed": boolean;
         "hidden": boolean;
+    }
+    interface MdIcon {
+        "concealed": boolean;
+        "hidden": boolean;
+        "name": string;
     }
     interface MdLabel {
         "concealed": boolean;
@@ -62,6 +68,12 @@ declare global {
         prototype: HTMLMdColumnElement;
         new (): HTMLMdColumnElement;
     };
+    interface HTMLMdIconElement extends Components.MdIcon, HTMLStencilElement {
+    }
+    var HTMLMdIconElement: {
+        prototype: HTMLMdIconElement;
+        new (): HTMLMdIconElement;
+    };
     interface HTMLMdLabelElement extends Components.MdLabel, HTMLStencilElement {
     }
     var HTMLMdLabelElement: {
@@ -96,6 +108,7 @@ declare global {
         "md-app-bar": HTMLMdAppBarElement;
         "md-button": HTMLMdButtonElement;
         "md-column": HTMLMdColumnElement;
+        "md-icon": HTMLMdIconElement;
         "md-label": HTMLMdLabelElement;
         "md-row": HTMLMdRowElement;
         "md-search": HTMLMdSearchElement;
@@ -112,10 +125,16 @@ declare namespace LocalJSX {
         "concealed"?: boolean;
         "hidden"?: boolean;
         "icon"?: string;
+        "kind"?: string;
     }
     interface MdColumn {
         "concealed"?: boolean;
         "hidden"?: boolean;
+    }
+    interface MdIcon {
+        "concealed"?: boolean;
+        "hidden"?: boolean;
+        "name"?: string;
     }
     interface MdLabel {
         "concealed"?: boolean;
@@ -146,6 +165,7 @@ declare namespace LocalJSX {
         "md-app-bar": MdAppBar;
         "md-button": MdButton;
         "md-column": MdColumn;
+        "md-icon": MdIcon;
         "md-label": MdLabel;
         "md-row": MdRow;
         "md-search": MdSearch;
@@ -160,6 +180,7 @@ declare module "@stencil/core" {
             "md-app-bar": LocalJSX.MdAppBar & JSXBase.HTMLAttributes<HTMLMdAppBarElement>;
             "md-button": LocalJSX.MdButton & JSXBase.HTMLAttributes<HTMLMdButtonElement>;
             "md-column": LocalJSX.MdColumn & JSXBase.HTMLAttributes<HTMLMdColumnElement>;
+            "md-icon": LocalJSX.MdIcon & JSXBase.HTMLAttributes<HTMLMdIconElement>;
             "md-label": LocalJSX.MdLabel & JSXBase.HTMLAttributes<HTMLMdLabelElement>;
             "md-row": LocalJSX.MdRow & JSXBase.HTMLAttributes<HTMLMdRowElement>;
             "md-search": LocalJSX.MdSearch & JSXBase.HTMLAttributes<HTMLMdSearchElement>;

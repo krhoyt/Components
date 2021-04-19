@@ -30,6 +30,11 @@
     md-toolbar md-label {
       --label-color: white;
     }
+
+    md-toolbar md-icon {
+      --icon-fill: #ffffff;
+    }
+
   </style>
 
 </head>
@@ -37,9 +42,13 @@
   
   <md-app-bar>
     <md-toolbar>
-      <md-label>App Bar</md-label>
+      <md-label>My Application</md-label>
+      <md-spacer></md-spacer>
+      <md-button>
+        <md-icon name="search"></md-icon>
+      </md-button>
     </md-toolbar>
-    <md-search value="This is a test"></md-search>
+    <md-search></md-search>
   </md-app-bar>
   <md-column>
     <md-row>
@@ -47,7 +56,11 @@
       <md-spacer width="4"></md-spacer>
       <md-label>Hoyt</md-label>
     </md-row>
-    <md-button>Cancel</md-button>
+    <md-button kind="contained">
+      <md-icon name="search" slot="start"></md-icon>
+      Cancel
+    </md-button>
+    <md-icon name="microphone"></md-icon>
   </md-column>
 
 </body>

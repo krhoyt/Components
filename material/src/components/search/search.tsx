@@ -9,10 +9,10 @@ export class Search {
   render() {
     return ( [
       <md-button 
-        icon="arrow" 
         onClick={() => this.doCancel()}
         part="arrow"
-        title="Cancel">          
+        title="Cancel">        
+        <md-icon name="arrow" slot="start"></md-icon>          
       </md-button>,
       <input 
         onKeyUp={() => this.doKey()}
@@ -22,10 +22,9 @@ export class Search {
         type="text" />,
       <md-button 
         hidden={!this.microphone} 
-        icon="mic" 
         onClick={() => this.doVoice()}
-        part="microphone"
-        title="Microphone">          
+        part="microphone">       
+        <md-icon name="microphone"></md-icon>                     
       </md-button>
     ] );
   }

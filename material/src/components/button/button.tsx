@@ -3,19 +3,15 @@ import { Component, h, Prop } from '@stencil/core';
 @Component( {
   tag: 'md-button',
   styleUrl: 'button.css',
-  shadow: true,
-  assetsDirs: ['assets']
+  shadow: true
 } )
 export class Button {
   render() {
     return (
-      <button 
-        part="button" 
-        style={{
-          backgroundImage: this.icon === undefined ? '' : `url( build/assets/${this.icon}.svg )`
-        }}
-        type="button">
+      <button part="button" type="button">
+        <slot name="start"></slot>
         <slot></slot>
+        <slot name="end"></slot>
       </button>
     );
   }
@@ -23,4 +19,5 @@ export class Button {
   @Prop( { reflect: true } ) concealed: boolean = false;
   @Prop( { reflect: true } ) hidden: boolean = false;    
   @Prop( { reflect: true } ) icon: string;    
+  @Prop( { reflect: true } ) kind: string;    
 }

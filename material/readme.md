@@ -5,6 +5,7 @@ Various [Material Design](http://material.io) themed components.
 - [App Bar](#app-bar)
 - [Button](#button)
 - [Column](#column)
+- [Icon](#icon)
 - [Label](#label)
 - [Row](#row)
 - [Search](#search)
@@ -34,9 +35,11 @@ Can be used for text labels or icons.
 - concealed (boolean): Visibility hidden
 - hidden (boolean): Display none
 - icon (string): Predefined SVG file name
+- kind (string): text (default), contained, outlined
 
 ### Styles
 
+- --button-background-color (red)
 - --button-background-image (none)
 - --button-background-position (center)
 - --button-background-size (24px)
@@ -45,6 +48,7 @@ Can be used for text labels or icons.
 - --button-font-family ('Roboto', sans-serif)
 - --button-font-size (14px)
 - --button-height (36px)
+- --button-text-align (center)
 - --button-text-transform (uppercase)
 - --button-width (36px)
 
@@ -60,6 +64,20 @@ Container. Shorthand for flex box column.
 
 - concealed (boolean): Visibility hidden
 - hidden (boolean): Display none
+
+## Icon
+
+Shows an icon from curated list.
+
+### Attributes
+
+- concealed (boolean): Visibility hidden
+- hidden (boolean): Display none
+- name (string): Name/ID of icon
+
+### Styles
+
+- --icon-fill (black)
 
 ## Label
 

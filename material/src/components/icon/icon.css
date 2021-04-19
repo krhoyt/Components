@@ -1,0 +1,19 @@
+:host {
+  box-sizing: border-box;
+  display: block;
+  height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+:host( [concealed] ) {
+  visibility: hidden;
+}
+
+:host( [hidden] ) {
+  display: none;
+}
+
+svg {
+  fill: var( --icon-fill, #000000 );
+}
